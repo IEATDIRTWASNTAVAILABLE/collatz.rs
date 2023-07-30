@@ -2,8 +2,8 @@ use text_io::read;
 fn main() {
     let mut input: i64 = read!(); //make input be what you input
     if input == 0 { 
-        println!("not a good idea") // tell you not to input 0 
-        panic!() // self explanatory
+        println!("not a good idea"); // tell you not to input 0 
+        panic!(); // self explanatory
     }
     loop{
     let checkeven: i64 = if let 0=input%2{
