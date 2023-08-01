@@ -1,9 +1,11 @@
 use text_io::read; 
 fn main() {
-    let mut input: i64 = read!(); //make input be what you input
+    println!("Input a number that isnt 0, contains no decimals, and doesn't rise above the 64 bit limit \nThe first output is the number of steps taken, second output is what that step is");
+    let mut stepscount=1;
+    let mut input: i64 = read!();
     if input == 0 { 
-        println!("not a good idea"); // tell you not to input 0 
-        panic!(); // self explanatory
+        println!("I TOLD YOU NOT 0");
+        panic!();
     }
     loop{
     let output: i64 = if let 0=input%2{
@@ -11,10 +13,12 @@ fn main() {
     } else {
         input*3+1 
     };
-    println!("{}", output);
+    println!("{stepscount} , {output}");
     input=output;
+    stepscount=stepscount+1;
     if output == 1{
         break
     }
+
 }
 }
